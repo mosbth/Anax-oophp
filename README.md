@@ -1,7 +1,7 @@
 Anax-oophp
 =========
 
-Anax-base builds upon Anax-base.
+Anax-oophp builds upon Anax-base.
 
 Anax-oophp is used as course material in the university course http://dbwebb.se/oophp.
 
