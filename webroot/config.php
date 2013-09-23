@@ -14,14 +14,6 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
 
 
 /**
- * Start the session.
- *
- */
-session_name(preg_replace('/[:\.\/-_]/', '', __DIR__));
-session_start();
-
-
-/**
  * Define Anax paths.
  *
  */
@@ -34,6 +26,14 @@ define('ANAX_THEME_PATH', ANAX_INSTALL_PATH . '/theme/render.php');
  *
  */
 include(ANAX_INSTALL_PATH . '/src/bootstrap.php');
+
+
+/**
+ * Start the session.
+ *
+ */
+session_name(preg_replace('/[:\.\/-_]/', '', __DIR__));
+session_start();
 
 
 /**

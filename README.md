@@ -37,7 +37,11 @@ History
 
 v1.0.x (latest)
 
-* -
+* Cloned Anax-bas to be the base for Anax-oophp.
+* Changed how jQuery is included, now using `jquery` and `jquery_src`.
+* Added dynamic menu / navbar in `webroot/config.php`, `theme/index.tpl.php` and `theme/functions.php`.
+* Changed order of including bootstrap.php and starting session in `config.php`. Compatible with anax-base v1.0.2.
+* Changed default directory for displaying source code to '..' in `webroot/source.php`.
 
 
 v1.0.0 (2013-06-28)
