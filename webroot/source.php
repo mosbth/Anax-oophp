@@ -12,6 +12,7 @@ $anax['stylesheets'][] = 'css/source.css';
 
 
 // Create the object to display sourcecode
+//$source = new CSource();
 $source = new CSource(array('secure_dir' => '..', 'base_dir' => '..'));
 
 
