@@ -60,3 +60,8 @@ body {
 .sitefooter {
   color: #666;
 }
+
+#debug {
+  font-size: smaller;
+  color: #999;
+}

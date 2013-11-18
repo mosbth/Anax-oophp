@@ -29,6 +29,9 @@ class CSource {
       'query_file' => isset($_GET['file']) ? strip_tags(trim($_GET['file']))  : null, // Selected directory as ?dir=xxx
       'query_path' => isset($_GET['path']) ? strip_tags(trim($_GET['path']))  : null, // Selected directory as ?dir=xxx
     );
+    if(isset($options['add_ignore'])) {
+      $default['ignore'] = array_merge($default['ignore'], $options['add_ignore']);
+    }
     $this->options = $options = array_merge($default, $options);
 
     //Backwards compatible with source.php query arguments for ?dir=xxx&file=xxx

@@ -60,8 +60,8 @@ class CDatabase {
   public function Dump() {
     $html  = '<p><i>You have made ' . self::$numQueries . ' database queries.</i></p><pre>';
     foreach(self::$queries as $key => $val) {
-      $params = empty(self::$params[$key]) ? null : htmlentities(print_r(self::$params[$key], 1)) . '<br/></br>';
-      $html .= $val . '<br/></br>' . $params;
+      $params = empty(self::$params[$key]) ? null : htmlentities(print_r(self::$params[$key], 1), null, 'UTF-8') . '<br/><br/>';
+      $html .= htmlentities($val, null, 'UTF-8') . '<br/><br/>' . $params;
     }
     return $html . '</pre>';
   }
@@ -129,11 +129,17 @@ class CDatabase {
     self::$numQueries++;
 
     if($debug) {
-      echo "<p>Query = <br/><pre>{$query}</pre></p><p>Num query = " . self::$numQueries . "</p><p><pre>".print_r($params, 1)."</pre></p>";
+      echo "<p>Query = <br/><pre>".htmlentities($query)."</pre></p><p>Num query = " . self::$numQueries . "</p><p><pre>".htmlentities(print_r($params, 1))."</pre></p>";
     }
 
     $this->stmt = $this->db->prepare($query);
-    return $this->stmt->execute($params);
+    $res = $this->stmt->execute($params);
+
+    if(!$res) {
+      echo "Error in executing query: " . $this->stmt->errorCode() . " " . htmlentities(print_r($this->stmt->errorInfo(), 1));
+    }
+
+    return $res;
   }
 
 

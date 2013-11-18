@@ -16,6 +16,7 @@
     <?php if(isset($navbar)): ?><div id='navbar'><?=get_navbar($navbar)?></div><?php endif; ?>
     <div id='main'><?=$main?></div>
     <div id='footer'><?=$footer?></div>
+    <?php if(isset($debug)): ?><div id='debug'><?=$debug?></div><?php endif; ?>
   </div>
 
 <?php if(isset($jquery) && isset($jquery_src)):?><script src='<?=$jquery_src?>'></script><?php endif; ?>
