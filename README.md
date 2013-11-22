@@ -42,6 +42,7 @@ v1.0.x (latest)
 * Added dynamic menu / navbar in `webroot/config.php`, `theme/index.tpl.php` and `theme/functions.php`.
 * Changed order of including bootstrap.php and starting session in `config.php`. Compatible with anax-base v1.0.2.
 * Changed default directory for displaying source code to '..' in `webroot/source.php`.
+* Naming of session in `webroot/config.php` allows only alphanumeric characters.
 
 
 v1.0.0 (2013-06-28)
