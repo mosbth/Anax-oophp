@@ -33,7 +33,7 @@ class CTextFilter
             if (isset($callbacks[$key])) {
                 $text = call_user_func_array([$this, $callbacks[$key]], [$text]);
             } else {
-                throw new \Exception("The filter '$filter' is not a valid filter string.");
+                throw new \Exception("The filter '$filters' is not a valid filter string. Its the key '$key' that is unknown and it does not match a valid callback.");
             }
         }
 
@@ -117,7 +117,7 @@ class CTextFilter
 
     /**
      * For convenience access to nl2br
-     * 
+     *
      * @param string $text text to be converted.
      *
      * @return string the formatted text.
@@ -152,7 +152,7 @@ class CTextFilter
                     case 'FIGURE':
                         return CTextFilter::ShortCodeFigure($matches[2]);
                         break;
-                    
+
                     default:
                         return "{$matches[1]} is unknown shortcode.";
                 }
@@ -162,7 +162,7 @@ class CTextFilter
     }
 
 
-    
+
     /**
     * Init shortcode handling by preparing the option list to an array, for those using arguments.
     *
@@ -193,7 +193,7 @@ class CTextFilter
 
     /**
      * Shortcode for <figure>.
-     * 
+     *
      * Usage example: [FIGURE src="img/home/me.jpg" caption="Me" alt="Bild på mig" nolink="nolink"]
      *
      * @param string $options for the shortcode.

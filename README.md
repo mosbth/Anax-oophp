@@ -37,6 +37,7 @@ History
 
 v1.0.x (latest)
 
+* Fixed exception message in CTextFilter to fix #2.
 * Cloned Anax-bas to be the base for Anax-oophp.
 * Changed how jQuery is included, now using `jquery` and `jquery_src`.
 * Added dynamic menu / navbar in `webroot/config.php`, `theme/index.tpl.php` and `theme/functions.php`.
