@@ -33,7 +33,7 @@ class CTextFilter
             if (isset($callbacks[$key])) {
                 $text = call_user_func_array([$this, $callbacks[$key]], [$text]);
             } else {
-                throw new \Exception("The filter '$filters' is not a valid filter string. Its the key '$key' that is unknown and it does not match a valid callback.");
+                throw new Exception("The filter '$filters' is not a valid filter string. Its the key '$key' that is unknown and it does not match a valid callback.");
             }
         }
 
@@ -53,23 +53,23 @@ class CTextFilter
      */
     public function bbcode2html($text)
     {
-        $search = [
+        $search = array(
             '/\[b\](.*?)\[\/b\]/is',
             '/\[i\](.*?)\[\/i\]/is',
             '/\[u\](.*?)\[\/u\]/is',
             '/\[img\](https?.*?)\[\/img\]/is',
             '/\[url\](https?.*?)\[\/url\]/is',
             '/\[url=(https?.*?)\](.*?)\[\/url\]/is'
-        ];
+        );
 
-        $replace = [
+        $replace = array(
             '<strong>$1</strong>',
             '<em>$1</em>',
             '<u>$1</u>',
             '<img src="$1" />',
             '<a href="$1">$1</a>',
             '<a href="$1">$2</a>'
-        ];
+        );
 
         return preg_replace($search, $replace, $text);
     }
@@ -90,7 +90,7 @@ class CTextFilter
         return preg_replace_callback(
             '#\b(?<![href|src]=[\'"])https?://[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/))#',
             function ($matches) {
-                return "<a href=\'{$matches[0]}\'>{$matches[0]}</a>";
+                return "<a href='{$matches[0]}'>{$matches[0]}</a>";
             },
             $text
         );
@@ -138,11 +138,9 @@ class CTextFilter
      */
     public function shortCode($text)
     {
-        $patterns = [
+        $patterns = array(
             '/\[(FIGURE)[\s+](.+)\]/',
-            '/\[(BASEURL)\]/',
-            '/\[(RELURL)\]/',
-        ];
+        );
 
         return preg_replace_callback(
             $patterns,
@@ -174,7 +172,7 @@ class CTextFilter
     {
         preg_match_all('/[a-zA-Z0-9]+="[^"]+"|\S+/', $options, $matches);
 
-        $res = [];
+        $res = array();
         foreach ($matches[0] as $match) {
             $pos = strpos($match, '=');
             if ($pos == false) {
@@ -204,7 +202,7 @@ class CTextFilter
     {
         extract(
             array_merge(
-                [
+                array(
                     'id' => null,
                     'class' => null,
                     'src' => null,
@@ -213,7 +211,7 @@ class CTextFilter
                     'caption' => null,
                     'href' => null,
                     'nolink' => false,
-                ],
+                ),
                 CTextFilter::ShortCodeInit($options)
             ),
             EXTR_SKIP
