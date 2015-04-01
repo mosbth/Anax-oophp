@@ -148,7 +148,7 @@ class CTextFilter
                 switch ($matches[1]) {
 
                     case 'FIGURE':
-                        return $this->ShortCodeFigure($matches[2]);
+                        return self::ShortCodeFigure($matches[2]);
                         break;
 
                     default:
@@ -212,7 +212,7 @@ class CTextFilter
                     'href' => null,
                     'nolink' => false,
                 ),
-                CTextFilter::ShortCodeInit($options)
+                self::ShortCodeInit($options)
             ),
             EXTR_SKIP
         );
