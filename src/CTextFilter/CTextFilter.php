@@ -148,7 +148,7 @@ class CTextFilter
                 switch ($matches[1]) {
 
                     case 'FIGURE':
-                        return self::ShortCodeFigure($matches[2]);
+                        return CTextFilter::ShortCodeFigure($matches[2]);
                         break;
 
                     default:
@@ -168,7 +168,7 @@ class CTextFilter
     *
     * @return array with all the options.
     */
-    protected static function shortCodeInit($options)
+    public static function shortCodeInit($options)
     {
         preg_match_all('/[a-zA-Z0-9]+="[^"]+"|\S+/', $options, $matches);
 
@@ -198,7 +198,7 @@ class CTextFilter
      *
      * @return array with all the options.
      */
-    protected static function shortCodeFigure($options)
+    public static function shortCodeFigure($options)
     {
         extract(
             array_merge(
@@ -212,7 +212,7 @@ class CTextFilter
                     'href' => null,
                     'nolink' => false,
                 ),
-                self::ShortCodeInit($options)
+                CTextFilter::ShortCodeInit($options)
             ),
             EXTR_SKIP
         );
