@@ -148,7 +148,7 @@ class CTextFilter
                 switch ($matches[1]) {
 
                     case 'FIGURE':
-                        return CTextFilter::ShortCodeFigure($matches[2]);
+                        return $this->ShortCodeFigure($matches[2]);
                         break;
 
                     default:
