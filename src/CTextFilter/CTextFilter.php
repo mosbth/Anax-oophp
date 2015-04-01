@@ -31,7 +31,7 @@ class CTextFilter
         foreach ($filter as $key) {
 
             if (isset($callbacks[$key])) {
-                $text = call_user_func_array([$this, $callbacks[$key]], [$text]);
+                $text = call_user_func_array(array($this, $callbacks[$key]), array($text));
             } else {
                 throw new Exception("The filter '$filters' is not a valid filter string. Its the key '$key' that is unknown and it does not match a valid callback.");
             }

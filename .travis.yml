@@ -10,5 +10,5 @@ php:
 script:
     - phpunit
 
-notifications:                      
-    irc: "irc.freenode.org#dbwebb"  
+notifications:
+    irc: "irc.freenode.org#dbwebb"
