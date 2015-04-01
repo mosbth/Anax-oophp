@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mosbth/Anax-oophp.svg)](https://travis-ci.org/mosbth/Anax-oophp)
+
 Anax-oophp
 =========
 
@@ -35,8 +37,13 @@ History
 -----------------------------------
 
 
-v1.0.x (latest)
+v1.0.1 (2015-04-01)
 
+* Adding build on scrutinizer.
+* Adding build on travis.
+* Adding phpunit.
+* Fixed CTextFilter to PHP 5.3.
+* Fixed CTextFilter makeClickable leaving backslashes, fix #3.
 * Fixed exception message in CTextFilter to fix #2.
 * Cloned Anax-bas to be the base for Anax-oophp.
 * Changed how jQuery is included, now using `jquery` and `jquery_src`.
@@ -56,7 +63,4 @@ v1.0.0 (2013-06-28)
  .  
 ..:
 
-Copyright (c) 2013 Mikael Roos
-
-
-
+Copyright (c) 2013-2015 Mikael Roos
