@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.org/mosbth/Anax-oophp.svg)](https://travis-ci.org/mosbth/Anax-oophp)
+[![Build Status](https://scrutinizer-ci.com/g/mosbth/Anax-oophp/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mosbth/Anax-oophp/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mosbth/Anax-oophp/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mosbth/Anax-oophp/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/mosbth/Anax-oophp/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mosbth/Anax-oophp/?branch=master)
 
 Anax-oophp
 =========
