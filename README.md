@@ -6,6 +6,8 @@
 Anax-oophp
 =========
 
+[![Join the chat at https://gitter.im/mosbth/Anax-oophp](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mosbth/Anax-oophp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Anax-oophp builds upon Anax-base.
 
 Anax-oophp is used as course material in the university course http://dbwebb.se/oophp.
